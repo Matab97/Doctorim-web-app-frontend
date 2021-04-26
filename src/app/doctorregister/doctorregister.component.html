@@ -20,11 +20,10 @@
                     placeholder="Email address" required autofocus ngModel>
                     
                     <label for="inputSpecialite" class="sr-only">Specialite</label>
-                    <select type="text" name="specialite" id="inputSpecialite" class="form-control" aria-label="Disabled select example" required ngModel>
-                        <option selected>Spécialité</option>
-                        <option value="1">Dentiste</option>
-                        <option value="2">Géneraliste</option>
-                        <option value="3">Genyco</option>
+                    <select type="text" aria-placeholder="Spécialit&" name="specialite" id="inputSpecialite" class="form-control" aria-label="Disabled select example" required ngModel>
+                        <option value="Dentiste">Dentiste</option>
+                        <option value="Géneraliste">Géneraliste</option>
+                        <option value="Genyco">Genyco</option>
                     </select>
 
                     <label for="inputPassword" class="sr-only">Password</label>
@@ -37,13 +36,13 @@
 
                     <button class="buttonmargin btn btn-lg btn-primary btn-block" type="submit">Sign Up</button>
                     
-                    <!--div class="alert alert-danger" role="alert" *ngIf="isFormValid">
+                    <div class="alert alert-danger" role="alert" *ngIf="isFormInvalid">
                         Merci de remplir le formulaire
                     </div>
     
-                    <div class="alert alert-danger" role="alert" *ngIf="areCredentialsInvalid">
-                        Votre Email ou Mots de passe est incorrect
-                    </div-->
+                    <div class="alert alert-danger" role="alert" *ngIf="isPasswordconform">
+                        Les mots de passe de sont pas conformes
+                    </div>
     
                   </form>
             </div>

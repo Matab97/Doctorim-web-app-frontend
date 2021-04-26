@@ -8,6 +8,9 @@ import { NgForm } from '@angular/forms';
 })
 export class DoctorregisterComponent implements OnInit {
 
+  isFormInvalid = false;
+  isPasswordconform = false;
+
   constructor() { }
 
   ngOnInit(): void {
@@ -15,6 +18,19 @@ export class DoctorregisterComponent implements OnInit {
 
   onSubmit(signUpForm: NgForm) {
     console.log(signUpForm.value);
+    if(!signUpForm.valid) {
+      this.isFormInvalid = true;
+      this.isPasswordconform = false;
+      return;
+    }
+    this.checkPassword(signUpForm);
   } 
+
+  private checkPassword(signUpForm: NgForm) {
+    if(!(signUpForm.value.password === signUpForm.value.passwordconfirmation)) {
+      this.isPasswordconform = true;
+      this.isFormInvalid = false;
+    }
+  }
   
 }
