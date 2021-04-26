@@ -8,9 +8,13 @@ import { NgForm } from '@angular/forms';
 })
 export class DoctorregisterComponent implements OnInit {
 
-  constructor(ngForm: NgForm) { }
+  constructor() { }
 
   ngOnInit(): void {
   }
 
+  onSubmit(signUpForm: NgForm) {
+    console.log(signUpForm.value);
+  } 
+  
 }
