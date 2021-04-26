@@ -1,16 +1,19 @@
 import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
 
+
 @Component({
-  selector: 'app-doctorregister',
-  templateUrl: './doctorregister.component.html',
-  styleUrls: ['./doctorregister.component.css']
+  selector: 'app-patientregister',
+  templateUrl: './patientregister.component.html',
+  styleUrls: ['./patientregister.component.css']
 })
-export class DoctorregisterComponent implements OnInit {
+
+
+
+export class PatientregisterComponent implements OnInit {
 
   isFormInvalid = false;
   isPasswordconform = false;
-  
 
   constructor() { }
 
@@ -25,7 +28,6 @@ export class DoctorregisterComponent implements OnInit {
       return;
     }
     this.checkPassword(signUpForm);
-    console.log(signUpForm.value);
   } 
 
   private checkPassword(signUpForm: NgForm) {

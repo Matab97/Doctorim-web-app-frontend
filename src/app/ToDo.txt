@@ -1,5 +1,3 @@
-- fixer le lien pour s'inscrire docteur
-- ameliorer le formulaire d'inscription docteur 
 - stocker les données en format json 
 - faire l'inscription Patient
 - adapter le login au patient et au docteur

@@ -6,12 +6,14 @@ import { StatisticsComponent } from './statistics/statistics.component';
 import { AuthGuard } from './guards/auth.guard';
 import { ChoosingComponent } from './choosing/choosing.component';
 import { DoctorregisterComponent } from './doctorregister/doctorregister.component';
+import { PatientregisterComponent } from './patientregister/patientregister.component';
 
 const routes: Routes = [
     {path: 'home', component: HomeComponent, canActivate: [AuthGuard]},
     {path: 'statistics', component: StatisticsComponent, canActivate: [AuthGuard]},
     {path: 'login', component: LoginComponent},
     {path: 'doctorregister', component: DoctorregisterComponent},
+    {path: 'patientregister', component: PatientregisterComponent},
     {path: '', component: ChoosingComponent}
 ];
 
