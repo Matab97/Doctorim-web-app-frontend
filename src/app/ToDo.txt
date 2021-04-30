@@ -1,2 +1,0 @@
-- hacher les password
-- Placeholder Spécialité
