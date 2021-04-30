@@ -1,0 +1,30 @@
+<div class="login-wrapper">
+    <div class="card">
+        <div class="card-body">
+            <form class="form-signin" (ngSubmit)="onSubmit(signInForm)" #signInForm="ngForm">
+
+                <img class="image_margin rounded mx-auto d-block" src="../../assets/images/logo.jpg" alt="" width="200" height="175">
+                
+                <!--h1 class="h3 mb-3 font-weight-normal">Please sign in</h1-->
+                
+                <label for="inputTel" class="sr-only">Tel</label>
+                <input type="Tel" name="tel" id="inputTel" class="form-control" 
+                placeholder="Tel: " required autofocus ngModel>
+                
+                <label for="inputPassword" class="sr-only">Password</label>
+                <input type="password" name="password" id="inputPassword" class="form-control" 
+                placeholder="Password" required ngModel>
+                
+                <button class="buttonmargin btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
+                <div class="alert alert-danger" role="alert" *ngIf="isFormValid">
+                    Merci de remplir le formulaire
+                </div>
+
+                <div class="alert alert-danger" role="alert" *ngIf="areCredentialsInvalid">
+                    Votre Numéro de télephone ou Mots de passe est incorrect
+                </div>
+
+            </form>
+        </div>
+    </div>
+</div>
