@@ -7,9 +7,9 @@
                 
                 <!--h1 class="h3 mb-3 font-weight-normal">Please sign in</h1-->
                 
-                <label for="inputEmail" class="sr-only">Email address</label>
-                <input type="email" name="email" id="inputEmail" class="form-control" 
-                placeholder="Email address" required autofocus ngModel>
+                <label for="inputTel" class="sr-only">Tel</label>
+                <input type="Tel" name="tel" id="inputTel" class="form-control" 
+                placeholder="Tel: " required autofocus ngModel>
                 
                 <label for="inputPassword" class="sr-only">Password</label>
                 <input type="password" name="password" id="inputPassword" class="form-control" 
@@ -21,12 +21,10 @@
                 </div>
 
                 <div class="alert alert-danger" role="alert" *ngIf="areCredentialsInvalid">
-                    Votre Email ou Mots de passe est incorrect
+                    Votre Numéro de télephone ou Mots de passe est incorrect
                 </div>
 
-              </form>
+            </form>
         </div>
     </div>
 </div>
-
-

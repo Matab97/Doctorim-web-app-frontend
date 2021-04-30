@@ -1,3 +1,2 @@
-- stocker les données en format json 
-- faire l'inscription Patient
-- adapter le login au patient et au docteur
+- hacher les password
+- Placeholder Spécialité

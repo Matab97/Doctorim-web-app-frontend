@@ -1,13 +1,16 @@
 import { Injectable } from '@angular/core';
-import { SignInData } from 'src/app/model/signinData';
+import { SignInData } from 'src/app/models/signinData';
 import { Router } from '@angular/router';
 
 @Injectable({
   providedIn: 'root'
 })
+
+
+
 export class AuthenticationService {
 
-  private readonly mockedUser = new SignInData('doctorim@doctorim.mr', 'test123');
+  private readonly mockedUser = new SignInData('0647068863', 'test');
   isAuthenticated = false;
 
   constructor(private router: Router) { }
@@ -23,11 +26,11 @@ export class AuthenticationService {
   } 
 
   private checkcredentials(signInData: SignInData): boolean {
-    return this.checkEmail(signInData.getEmail()) && this.checkPassword(signInData.getPassword());
+    return this.checkTel(signInData.getTel()) && this.checkPassword(signInData.getPassword());
   }
 
-  private checkEmail(email: string): boolean {
-    return email === this.mockedUser.getEmail();
+  private checkTel(tel: string): boolean {
+    return tel === this.mockedUser.getTel();
   }
 
   private checkPassword(password: string): boolean {
@@ -35,7 +38,11 @@ export class AuthenticationService {
   }
 
   logout() {
+  
     this.isAuthenticated = false;
     this.router.navigate(['']);
+  
   }
+
+  
 }

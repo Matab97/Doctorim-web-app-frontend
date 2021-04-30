@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { NgForm} from '@angular/forms';
-import {AuthenticationService} from '../service/authentication/authentication.service';
-import { SignInData } from '../model/signinData'; 
+import {AuthenticationService} from '../../services/authentication/authentication.service';
+import { SignInData } from '../../models/signinData'; 
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
@@ -27,7 +27,7 @@ export class LoginComponent implements OnInit {
   }
 
   private checkCredentials(signinForm: NgForm) {
-    const signInData = new SignInData(signinForm.value.email, signinForm.value.password);
+    const signInData = new SignInData(signinForm.value.tel, signinForm.value.password);
     if(!this.authenticationService.authenticate(signInData)) {
       this.isFormValid = false;
       this.areCredentialsInvalid = true;

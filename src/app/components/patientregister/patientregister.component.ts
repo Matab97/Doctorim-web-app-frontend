@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
-
+import { PatientSignUpData } from '../../models/PatientSignUpData';
 
 @Component({
   selector: 'app-patientregister',
@@ -21,19 +21,31 @@ export class PatientregisterComponent implements OnInit {
   }
 
   onSubmit(signUpForm: NgForm) {
-    console.log(signUpForm.value);
+    //console.log(signUpForm.value);
     if(!signUpForm.valid) {
       this.isFormInvalid = true;
       this.isPasswordconform = false;
       return;
     }
+    this.isFormInvalid = false;
     this.checkPassword(signUpForm);
   } 
 
   private checkPassword(signUpForm: NgForm) {
     if(!(signUpForm.value.password === signUpForm.value.passwordconfirmation)) {
       this.isPasswordconform = true;
-      this.isFormInvalid = false;
+      // Envoyer les donées au back 
+
+      // --------------
+    } else {
+      this.isPasswordconform = false;
+      const patient = new PatientSignUpData(signUpForm.value.nom, 
+        signUpForm.value.prenom, 
+        signUpForm.value.tel,
+        'Patient',
+        signUpForm.value.password);
+      
+      console.log(patient);
     }
   }
   

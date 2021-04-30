@@ -1,12 +1,12 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { LoginComponent } from './login/login.component';
-import { HomeComponent } from './home/home.component';
-import { StatisticsComponent } from './statistics/statistics.component';
+import { LoginComponent } from './components/login/login.component';
+import { HomeComponent } from './components/home/home.component';
+import { StatisticsComponent } from './components/statistics/statistics.component';
 import { AuthGuard } from './guards/auth.guard';
-import { ChoosingComponent } from './choosing/choosing.component';
-import { DoctorregisterComponent } from './doctorregister/doctorregister.component';
-import { PatientregisterComponent } from './patientregister/patientregister.component';
+import { ChoosingComponent } from './components/choosing/choosing.component';
+import { DoctorregisterComponent } from './components/doctorregister/doctorregister.component';
+import { PatientregisterComponent } from './components/patientregister/patientregister.component';
 
 const routes: Routes = [
     {path: 'home', component: HomeComponent, canActivate: [AuthGuard]},

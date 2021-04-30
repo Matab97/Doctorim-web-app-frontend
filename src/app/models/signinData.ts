@@ -1,14 +1,14 @@
 export class SignInData {
-    private email: string;
+    private tel: string;
     private password: string;
 
-    constructor(email: string, password: string) {
-        this.email = email;
+    constructor(tel: string, password: string) {
+        this.tel = tel;
         this.password = password;
     }
 
-    getEmail(): string {
-        return this.email;
+    getTel(): string {
+        return this.tel;
     }
 
     getPassword(): string {

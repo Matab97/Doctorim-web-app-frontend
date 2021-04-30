@@ -4,12 +4,12 @@ import { FormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { LoginComponent } from './login/login.component';
-import { HomeComponent } from './home/home.component';
-import { StatisticsComponent } from './statistics/statistics.component';
-import { ChoosingComponent } from './choosing/choosing.component';
-import { DoctorregisterComponent } from './doctorregister/doctorregister.component';
-import { PatientregisterComponent } from './patientregister/patientregister.component';
+import { LoginComponent } from './components/login/login.component';
+import { HomeComponent } from './components/home/home.component';
+import { StatisticsComponent } from './components/statistics/statistics.component';
+import { ChoosingComponent } from './components/choosing/choosing.component';
+import { DoctorregisterComponent } from './components/doctorregister/doctorregister.component';
+import { PatientregisterComponent } from './components/patientregister/patientregister.component';
 
 @NgModule({
   declarations: [
